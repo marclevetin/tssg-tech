@@ -7,9 +7,10 @@ const CalendarItem = (props) => {
       <h4>When</h4>
       {props.when}
       <h4>Where</h4>
-      {props.where}
+      <p>{props.where}</p>
+      <p>Eventually this will be a map of some kind</p>
       <h4>Join Us</h4>
-      {props.join}
+      <p>Contact {props.join} to learn about attend.</p>
       <p>{props.details}</p>
     </div>
   )

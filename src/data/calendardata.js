@@ -4,7 +4,6 @@ const calendardata = [
   { id: 3, title: 'Mobile Application Development', when: 'Tuesdays, 10am-1pm, online' , where: 'Acton Public Library', join: 'Mark Pralat', details: '' },
   { id: 4, title: 'QA Study Group', when: 'Thursdays, 10am-12pm' , where: 'Online', join: 'Ray Bloom', details: '' },
   { id: 5, title: 'Data Analytics', when: 'Fridays, 1-3pm' , where: 'Acton Public Library, online', join: 'Norm Heckman', details: '' }
-
 ]
 
 module.exports = calendardata
