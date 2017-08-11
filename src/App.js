@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import Navbar from './containers/Navbar';
+import Calendar from './containers/Calendar';
+import calendardata from './data/calendardata';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-      <Navbar />
         <div className="App-header">
-          <h2>Technical Skills Share Group</h2>
+          <h1>Technical Skills Share Group</h1>
         </div>
+        <Navbar />
+        <Calendar
+          data={calendardata}
+        />
         <div>
           <h2>Description</h2>
           <p>TECHNICAL SKILLS SHARE GROUP (TSSG)
