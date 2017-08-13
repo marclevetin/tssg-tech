@@ -3,6 +3,8 @@ import Navbar from './containers/Navbar';
 import Calendar from './containers/Calendar';
 import Teams from './containers/Teams';
 import calendardata from './data/calendardata';
+import teamsdata from './data/teamsdata';
+import projectsdata from './data/projects'
 
 class App extends Component {
   render() {
@@ -29,7 +31,10 @@ class App extends Component {
           data={calendardata}
         />
         <div>
-        <Teams />
+        <Teams
+          data={teamsdata}
+          projects={projectsdata}
+        />
           <h2>Teams</h2>
           <h3>Web team details</h3>
           <p>

@@ -11,6 +11,7 @@ class Calendar extends Component {
     let calendaritems = this.props.data.map(item => {
       return (
         <CalendarItem
+          key = {item.id}
           title = {item.title}
           when = {item.when}
           where = {item.where}
