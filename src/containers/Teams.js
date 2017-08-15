@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import Team from '../components/Team';
 import Project from '../components/Project';
+import Platforms from './Platforms'
+import Platform from '../components/Platform'
+import platformsdata from '../data/platformsdata'
 
 class Teams extends Component {
   constructor(props) {
@@ -28,9 +31,23 @@ class Teams extends Component {
       )
     })
 
+    let allPlatforms = this.platformsdata.map(platform => {
+      if (this.state.activeTeam === platform.team) {
+        return (
+          <Platform
+            key = {platform.id}
+            id = {platform.id}
+            platform = {platform.name}
+            description = {platform.description}
+          />
+        )
+      }
+    })
+
     let teamProjects = this.props.projects.map(project => {
       if (this.state.activeTeam === project.team) {
         return (
+          <div>
           <Project
             key = {project.id}
             id = {project.id}
@@ -38,6 +55,8 @@ class Teams extends Component {
             project = {project.project}
             description = {project.description}
           />
+          {allPlatforms}
+          </div>
         )
       }
     })
@@ -48,6 +67,7 @@ class Teams extends Component {
         {allTeams}
       <h3>Current Projects</h3>
         {teamProjects}
+
       </div>
     )
   }
