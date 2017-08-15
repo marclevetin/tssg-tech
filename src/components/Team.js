@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 const Team = (props) => {
   return (
     <div>
-      {props.name}
+      <button onClick={props.handleClick}>{props.name}</button>
     </div>
   )
 }

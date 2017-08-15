@@ -27,44 +27,14 @@ class App extends Component {
           see below for the weekly schedule
           </p>
         </div>
-        <Calendar
-          data={calendardata}
-        />
+          <Calendar
+            data={calendardata}
+          />
         <div>
-        <Teams
-          data={teamsdata}
-          projects={projectsdata}
-        />
-          <h2>Teams</h2>
-          <h3>Web team details</h3>
-          <p>
-            Tools and Platforms
-            Current Projects
-          </p>
-        </div>
-        <div>
-          <h3>Mobile team details</h3>
-          <p>
-            Tools and Platforms
-            Current Projects
-          </p>
-        </div>
-        <div>
-          <h3>SQA team details</h3>
-          <p>
-            Tools and Platforms
-            Current Projects
-          </p>
-        </div>
-        <div>
-          <h3>Data Analytics team details</h3>
-          <p>
-            Tools and Platforms
-            Current Projects
-          </p>
-        </div>
-        <div>
-          <h2>Project details</h2>
+          <Teams
+            data={teamsdata}
+            projects={projectsdata}
+          />
         </div>
       </div>
     );

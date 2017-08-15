@@ -3,7 +3,8 @@ import React, {Component} from 'react'
 const Project = (props) => {
   return (
     <div>
-      This is a project
+      <h4>{props.project}</h4>
+      <p>{props.description}</p>
     </div>
   )
 }
