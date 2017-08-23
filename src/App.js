@@ -5,12 +5,12 @@ import Teams from './containers/Teams';
 import calendardata from './data/calendardata';
 import teamsdata from './data/teamsdata';
 import projectsdata from './data/projects'
+import platformsdata from './data/platformsdata'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        
         <Navbar />
         <div>
           <p>TECHNICAL SKILLS SHARE GROUP (TSSG)
@@ -32,6 +32,7 @@ class App extends Component {
           <Teams
             data={teamsdata}
             projects={projectsdata}
+            platforms={platformsdata}
           />
         </div>
       </div>

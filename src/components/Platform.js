@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 const Platform = (props) => {
   return (
     <div>
-      Platform item
+      <li>{props.platform} - {props.description}</li>
     </div>
   )
 }
