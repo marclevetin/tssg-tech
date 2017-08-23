@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Team from '../components/Team';
-import Project from '../components/Project';
+import Platform from '../components/Platform';
 
 class Platforms extends Component {
   constructor(props) {
@@ -17,10 +17,27 @@ class Platforms extends Component {
     }
   }
 
+
   render() {
+    let allPlatforms = this.props.platforms.map(platform => {
+      if (this.props.activeTeam === platform.team) {
+        return (
+          <Platform
+          key = {platform.id}
+          id = {platform.id}
+          platform = {platform.name}
+          description = {platform.description}
+          />
+        )
+      }
+    })
+
     return(
       <div>
-      This is Platforms
+      <h3>Platforms</h3>
+      <ul>
+        {allPlatforms}
+      </ul>
       </div>
     )
   }

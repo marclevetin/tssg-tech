@@ -30,18 +30,18 @@ class Teams extends Component {
       )
     })
 
-    let allPlatforms = this.props.platforms.map(platform => {
-      if (this.state.activeTeam === platform.team) {
-        return (
-          <Platform
-            key = {platform.id}
-            id = {platform.id}
-            platform = {platform.name}
-            description = {platform.description}
-          />
-        )
-      }
-    })
+    // let allPlatforms = this.props.platforms.map(platform => {
+    //   if (this.state.activeTeam === platform.team) {
+    //     return (
+    //       <Platform
+    //         key = {platform.id}
+    //         id = {platform.id}
+    //         platform = {platform.name}
+    //         description = {platform.description}
+    //       />
+    //     )
+    //   }
+    // })
 
     let teamProjects = this.props.projects.map(project => {
       if (this.state.activeTeam === project.team) {
@@ -66,10 +66,11 @@ class Teams extends Component {
         {allTeams}
       <h3>Current Projects</h3>
         {teamProjects}
-      <h3>Platforms</h3>
-        <ul>
-          {allPlatforms}
-        </ul>
+      <Platforms
+        activeTeam={this.state.activeTeam}
+        platforms={this.props.platforms}
+      />
+
       </div>
     )
   }
