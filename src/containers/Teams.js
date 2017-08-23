@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Team from '../components/Team';
 import Project from '../components/Project';
 import Platforms from './Platforms'
-import Platform from '../components/Platform'
+import Projects from './Projects'
 
 class Teams extends Component {
   constructor(props) {
@@ -30,45 +30,17 @@ class Teams extends Component {
       )
     })
 
-    // let allPlatforms = this.props.platforms.map(platform => {
-    //   if (this.state.activeTeam === platform.team) {
-    //     return (
-    //       <Platform
-    //         key = {platform.id}
-    //         id = {platform.id}
-    //         platform = {platform.name}
-    //         description = {platform.description}
-    //       />
-    //     )
-    //   }
-    // })
-
-    let teamProjects = this.props.projects.map(project => {
-      if (this.state.activeTeam === project.team) {
-        return (
-          <div>
-          <Project
-            key = {project.id}
-            id = {project.id}
-            team = {project.team}
-            project = {project.project}
-            description = {project.description}
-          />
-
-          </div>
-        )
-      }
-    })
-
     return(
       <div>
       <h2>Teams</h2>
         {allTeams}
-      <h3>Current Projects</h3>
-        {teamProjects}
       <Platforms
         activeTeam={this.state.activeTeam}
         platforms={this.props.platforms}
+      />
+      <Projects
+        activeTeam={this.state.activeTeam}
+        projects={this.props.projects}
       />
 
       </div>
