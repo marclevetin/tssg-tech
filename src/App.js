@@ -10,9 +10,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <h1>Technical Skills Share Group</h1>
-        </div>
+        
         <Navbar />
         <div>
           <p>TECHNICAL SKILLS SHARE GROUP (TSSG)

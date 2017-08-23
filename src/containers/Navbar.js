@@ -11,6 +11,9 @@ class Navbar extends Component {
   render() {
     return (
       <div className="navbar">
+      <div className="App-header">
+        <h1>Technical Skills Share Group</h1>
+      </div>
         <ul>
           <li>About</li>
           <li>Calendar</li>

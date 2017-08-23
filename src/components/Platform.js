@@ -7,3 +7,5 @@ const Platform = (props) => {
     </div>
   )
 }
+
+export default Platform;
