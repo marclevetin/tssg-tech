@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Team from '../components/Team';
 import Project from '../components/Project';
 
 class Projects extends Component {
@@ -8,29 +7,21 @@ class Projects extends Component {
     this.state ={
       activeTeam: ''
     }
-    this.handleClick = this.handleClick.bind(this)
   }
-
-  handleClick(team) {
-    if(this.state.activeTeam !== team) {
-      this.setState({activeTeam: team })
-    }
-  }
-
 
   render() {
-    let allProjects = this.props.projects.map(project => {
-      if (this.props.activeTeam === project.team) {
+    let allProjects = this.props.projects
+      .filter(project => project.team === this.props.activeTeam)
+      .map(project => {
         return (
           <Project
-          key = {project.id}
-          id = {project.id}
-          project = {project.name}
-          description = {project.description}
+            key = {project.id}
+            id = {project.id}
+            project = {project.project}
+            description = {project.description}
           />
         )
-      }
-    })
+      })
 
     return(
       <div>

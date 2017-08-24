@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Team from '../components/Team';
 import Platform from '../components/Platform';
 
 class Platforms extends Component {
@@ -8,36 +7,28 @@ class Platforms extends Component {
     this.state ={
       activeTeam: ''
     }
-    this.handleClick = this.handleClick.bind(this)
   }
-
-  handleClick(team) {
-    if(this.state.activeTeam !== team) {
-      this.setState({activeTeam: team })
-    }
-  }
-
 
   render() {
-    let allPlatforms = this.props.platforms.map(platform => {
-      if (this.props.activeTeam === platform.team) {
+    let allPlatforms = this.props.platforms
+      .filter(platform => platform.team === this.props.activeTeam)
+      .map(platform => {
         return (
           <Platform
-          key = {platform.id}
-          id = {platform.id}
-          platform = {platform.name}
-          description = {platform.description}
+            key = {platform.id}
+            id = {platform.id}
+            platform = {platform.name}
+            description = {platform.description}
           />
         )
-      }
-    })
+      })
 
     return(
       <div>
-      <h3>Platforms</h3>
-      <ul>
-        {allPlatforms}
-      </ul>
+        <h3>Platforms</h3>
+        <ul>
+          {allPlatforms}
+        </ul>
       </div>
     )
   }

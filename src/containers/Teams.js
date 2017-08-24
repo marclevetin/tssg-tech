@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Team from '../components/Team';
-import Project from '../components/Project';
 import Platforms from './Platforms'
 import Projects from './Projects'
 
