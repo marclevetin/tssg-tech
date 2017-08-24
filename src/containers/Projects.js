@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Project from '../components/Project';
+import {SectionHeader} from '../components/styled/Header'
 
 class Projects extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ class Projects extends Component {
 
     return(
       <div>
-      <h3>Projects</h3>
+      <SectionHeader>Projects</SectionHeader>
       <ul>
         {allProjects}
       </ul>
