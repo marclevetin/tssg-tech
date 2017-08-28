@@ -1,10 +1,13 @@
 import React from 'react'
+import Text, {ItalicsText} from './styled/Text'
+import {SectionHeader} from './styled/Header'
+
 
 const Project = (props) => {
   return (
     <div>
-      <h4>{props.project}</h4>
-      <p>{props.description}</p>
+      <SectionHeader>{props.project}</SectionHeader>
+      <Text>{props.description}</Text>
     </div>
   )
 }
