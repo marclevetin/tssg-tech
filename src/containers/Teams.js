@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Team from '../components/Team';
 import Platforms from './Platforms'
 import Projects from './Projects'
+import Header from '../components/styled/Header'
 
 class Teams extends Component {
   constructor(props) {
@@ -31,7 +32,7 @@ class Teams extends Component {
 
     return(
       <div>
-      <h2>Teams</h2>
+      <Header>Teams</Header>
         {allTeams}
       <Platforms
         activeTeam={this.state.activeTeam}

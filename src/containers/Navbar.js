@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import Title from '../components/styled/Title'
+import Motto from '../components/styled/Motto'
+import Navmenu from '../components/styled/Navmenu'
+import NavmenuItem from '../components/styled/NavmenuItem'
 
 class Navbar extends Component {
   constructor(props) {
@@ -10,16 +14,15 @@ class Navbar extends Component {
 
   render() {
     return (
-      <div className="navbar">
-      <div className="App-header">
-        <h1>Technical Skills Share Group</h1>
-      </div>
-        <ul>
-          <li>About</li>
-          <li>Calendar</li>
-          <li>Teams</li>
-          <li>Contact</li>
-        </ul>
+      <div>
+        <Title>Technical Skills Share Group</Title>
+        <Motto>learn by doing; share what you learn</Motto>
+        <Navmenu>
+          <NavmenuItem>About</NavmenuItem>
+          <NavmenuItem>Calendar</NavmenuItem>
+          <NavmenuItem>Teams</NavmenuItem>
+          <NavmenuItem>Contact</NavmenuItem>
+        </Navmenu>
       </div>
     )
   }

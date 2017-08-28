@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import CalendarItem from '../components/CalendarItem'
+import Header from '../components/styled/Header'
 
 class Calendar extends Component {
-  // eslint-disable-next-line
   // The linter warns against useless constructors.  We need to keep the
   // constructor to pass props and generate the Calendar Items in the render
   // method.  We could pass it down from <App /> through props, but this seemed
   // like the simpler refactor for now.
+  // eslint-disable-next-line
   constructor(props) {
     super(props)
 
@@ -28,7 +29,7 @@ class Calendar extends Component {
 
     return (
       <div>
-        <h2>Calendar</h2>
+        <Header>Calendar</Header>
         { calendaritems }
       </div>
     )

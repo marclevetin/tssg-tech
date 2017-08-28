@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Platform from '../components/Platform';
+import {SectionHeader} from '../components/styled/Header'
 
 class Platforms extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ class Platforms extends Component {
 
     return(
       <div>
-        <h3>Platforms</h3>
+        <SectionHeader>Platforms</SectionHeader>
         <ul>
           {allPlatforms}
         </ul>
