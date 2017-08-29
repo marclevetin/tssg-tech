@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import CalendarItem from '../components/CalendarItem'
 import Header from '../components/styled/Header'
 
+import calendardata from '../data/calendardata';
+
 class Calendar extends Component {
   // The linter warns against useless constructors.  We need to keep the
   // constructor to pass props and generate the Calendar Items in the render
@@ -14,7 +16,7 @@ class Calendar extends Component {
   }
 
   render() {
-    let calendaritems = this.props.data.map(item => {
+    let calendaritems = {calendardata}.calendardata.map(item => {
       return (
         <CalendarItem
           key = {item.id}

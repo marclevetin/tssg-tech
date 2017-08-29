@@ -4,6 +4,10 @@ import Platforms from './Platforms'
 import Projects from './Projects'
 import Header from '../components/styled/Header'
 
+import teamsdata from '../data/teamsdata'
+import projectsdata from '../data/projects'
+import platformsdata from '../data/platformsdata'
+
 class Teams extends Component {
   constructor(props) {
     super(props)
@@ -20,7 +24,7 @@ class Teams extends Component {
   }
 
   render() {
-    let allTeams = this.props.data.map(team => {
+    let allTeams = {teamsdata}.teamsdata.map(team => {
       return (
         <Team
           key = {team.id}
@@ -29,18 +33,20 @@ class Teams extends Component {
         />
       )
     })
-
+    let platforms = {platformsdata}.platformsdata
+    let projects = {projectsdata}.projectsdata
+    debugger;
     return(
       <div>
       <Header>Teams</Header>
         {allTeams}
       <Platforms
         activeTeam={this.state.activeTeam}
-        platforms={this.props.platforms}
+        platforms={platforms}
       />
       <Projects
         activeTeam={this.state.activeTeam}
-        projects={this.props.projects}
+        projects={projects}
       />
 
       </div>

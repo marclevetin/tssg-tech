@@ -5,4 +5,4 @@ const teamsdata = [
   {id: 4, name: 'Data Analytics'}
 ]
 
-module.exports = teamsdata
+export default teamsdata

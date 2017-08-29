@@ -25,13 +25,13 @@ class Navbar extends Component {
       <Motto>learn by doing; share what you learn</Motto>
         <Router>
           <div>
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/calendar">Calendar</Link></li>
-              <li><Link to="/teams">Teams</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-            </ul>
+            <Navmenu>
+              <NavmenuItem><Link to="/">Home</Link></NavmenuItem>
+              <NavmenuItem><Link to="/about">About</Link></NavmenuItem>
+              <NavmenuItem><Link to="/calendar">Calendar</Link></NavmenuItem>
+              <NavmenuItem><Link to="/teams">Teams</Link></NavmenuItem>
+              <NavmenuItem><Link to="/contact">Contact</Link></NavmenuItem>
+            </Navmenu>
 
             <hr/>
 
@@ -41,12 +41,7 @@ class Navbar extends Component {
             <Route path="/contact" component={Intro}/>
           </div>
         </Router>
-        <Navmenu>
-          <NavmenuItem>About</NavmenuItem>
-          <NavmenuItem>Calendar</NavmenuItem>
-          <NavmenuItem>Teams</NavmenuItem>
-          <NavmenuItem>Contact</NavmenuItem>
-        </Navmenu>
+
       </div>
     )
   }
