@@ -1,9 +1,14 @@
 import React, {Component} from 'react';
+
+// components
 import Team from '../components/Team';
 import Platforms from './Platforms'
 import Projects from './Projects'
+
+// styled components
 import Header from '../components/styled/Header'
 
+// data
 import teamsdata from '../data/teamsdata'
 import projectsdata from '../data/projects'
 import platformsdata from '../data/platformsdata'
@@ -35,7 +40,7 @@ class Teams extends Component {
     })
     let platforms = {platformsdata}.platformsdata
     let projects = {projectsdata}.projectsdata
-    debugger;
+
     return(
       <div>
       <Header>Teams</Header>
