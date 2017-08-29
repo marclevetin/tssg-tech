@@ -1,5 +1,5 @@
 import React from 'react'
-import Text, {ItalicsText} from './styled/Text'
+import Text from './styled/Text'
 import {SectionHeader} from './styled/Header'
 
 

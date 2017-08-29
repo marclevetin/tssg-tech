@@ -35,4 +35,4 @@ const platformsdata = [
   {id: 34, team: 'Data Analytics', name: 'Bash', description: 'TBD'},
 ]
 
-module.exports = platformsdata
+export default platformsdata

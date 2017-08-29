@@ -6,4 +6,4 @@ const calendardata = [
   { id: 5, title: 'Data Analytics', when: 'Fridays, 1-3pm' , where: 'Acton Public Library, online', join: 'Norm Heckman', details: '' }
 ]
 
-module.exports = calendardata
+export default calendardata

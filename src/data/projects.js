@@ -4,4 +4,4 @@ const projectsdata = [
   {id: 3, team: 'Mobile Application Development', project: 'SleepAnalyzer', description: 'TBD'},
 ]
 
-module.exports = projectsdata
+export default projectsdata
