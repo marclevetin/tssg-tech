@@ -42,7 +42,7 @@ router.get('/', function(req, res) {
 router.route('/calendar')
   //retrieve the calendar
   .get(function(req, res) {
-  //looks at our Comment Schema
+  //looks at our Calendar Schema
     Calendar.find(function(err, calendar) {
       if (err)
       res.send(err);
@@ -50,7 +50,8 @@ router.route('/calendar')
       res.json(calendar)
     });
   })
-  //post new comment to the database
+
+  //post new calendar item to the database (needed for Postman for now, possible authentication feature later)
   .post(function(req, res) {
     let calendar = new Calendar();
     //body parser lets us use the req.body
@@ -66,6 +67,16 @@ router.route('/calendar')
     });
   });
 
+router.route('/calendar/:calendar_id')
+  .delete(function(req, res) {
+  //selects the calendar item by its ID, then removes it.
+    Calendar.remove({ _id: req.params.calendar_id }, function(err, comment) {
+    if (err)
+    res.send(err);
+    res.json({ message: 'Calendar has been deleted' })
+    })
+  });
+
 // Use our router configuration when we call /api
 app.use('/api', router);
 
@@ -75,6 +86,7 @@ app.listen(port, function() {
 });
 
 // database configuration (see .env file for details)
+// this differs slightly from tutorial because mongo's requirements have changed.
 let promise = mongoose.connect('mongodb://' + process.env.DB_USER + ':' + process.env.DB_PASSWORD + '@ds161913.mlab.com:61913/tssg-tech', {
   useMongoClient: true
 })

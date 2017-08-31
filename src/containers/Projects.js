@@ -26,10 +26,10 @@ class Projects extends Component {
 
     return(
       <div>
-      <SectionHeader>Projects</SectionHeader>
-      <ul>
-        {allProjects}
-      </ul>
+        <SectionHeader>Projects</SectionHeader>
+        <ul>
+          {allProjects}
+        </ul>
       </div>
     )
   }

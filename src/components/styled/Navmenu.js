@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Navmenu = styled.ul`
-  background-color: blue;
+  background-color: gray;
   list-style-type: none;
   margin: 0;
   padding: 0;

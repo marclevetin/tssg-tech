@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Calendar from './containers/Calendar';
 import Teams from './containers/Teams';
 import Intro from './containers/Intro'
+import Contact from './containers/Contact'
 
 // styled components
 import Title from './components/styled/Title'
@@ -32,7 +33,7 @@ class App extends Component {
             <Route exact path="/" component={Intro}/>
             <Route path="/calendar" component={Calendar}/>
             <Route path="/teams" component={Teams}/>
-            <Route path="/contact" component={Intro}/>
+            <Route path="/contact" component={Contact}/>
           </div>
         </Router>
       </div>
