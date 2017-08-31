@@ -1,22 +1,33 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+
 import CalendarItem from '../components/CalendarItem'
 import Header from '../components/styled/Header'
 
-import calendardata from '../data/calendardata';
-
 class Calendar extends Component {
-  // The linter warns against useless constructors.  We need to keep the
-  // constructor to pass props and generate the Calendar Items in the render
-  // method.  We could pass it down from <App /> through props, but this seemed
-  // like the simpler refactor for now.
-  // eslint-disable-next-line
   constructor(props) {
     super(props)
+    this.state = {
+      data: []
+    };
 
+    this.loadCalendarItemsFromServer = this.loadCalendarItemsFromServer.bind(this);
+  }
+
+  loadCalendarItemsFromServer() {
+    axios.get('http://localhost:3001/api/calendar')
+      .then(res => {
+        this.setState({data: res.data});
+      })
+  }
+
+  componentDidMount() {
+    this.loadCalendarItemsFromServer();
+    setInterval(this.loadCommentsFromServer, 2000);
   }
 
   render() {
-    let calendaritems = {calendardata}.calendardata.map(item => {
+    let calendaritems = this.state.data.map(item => {
       return (
         <CalendarItem
           key = {item.id}
